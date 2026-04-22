@@ -1,13 +1,11 @@
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { setUser } from "../../store/userSlice"
-
+import { Navigate } from "react-router-dom"
 
 function Profile() {
-
   const dispatch = useDispatch()
   const token = useSelector((state) => state.user.token)
-
   const user = useSelector((state) => state.user.user)
 
   useEffect(() => {
@@ -17,7 +15,7 @@ function Profile() {
           method: "GET",
           headers: {
             Authorization: `Bearer ${token}`,
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
           },
         })
 
@@ -32,10 +30,12 @@ function Profile() {
       }
     }
 
-    if (token) {
-      fetchProfile()
-    }
+    fetchProfile()
   }, [token, dispatch])
+
+  if (!token) {
+    return <Navigate to="/sign-in" />
+  }
 
   return (
     <main className="main bg-dark">
