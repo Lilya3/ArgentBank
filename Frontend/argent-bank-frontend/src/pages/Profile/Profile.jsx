@@ -83,28 +83,38 @@ function Profile() {
 
   return (
     <main className="main bg-dark">
-      <h1>
-        Welcome Back
-        <br />
-        {user?.firstName} {user?.lastName}
-      </h1>
+      <div>
 
-      {isEditing ? (
-        <form onSubmit={handleSubmit}>
-          <input
-          type="text"
-          value={editedUserName}
-          onChange={(e) => setEditedUserName(e.target.value)}
-        />
+        <h1>
+          Welcome Back
+          <br />
+          <span>
+            {user?.firstName} {user?.lastName}
+          </span>
+        </h1>
 
-          <button type="submit">Save</button>
-          <button type="button" onClick={handleCancel}>
-            Cancel
+        {isEditing ? (
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              value={editedUserName}
+              onChange={(e) => setEditedUserName(e.target.value)}
+            />
+
+            <div>
+              <button className="save" type="submit">Save</button>
+              <button className="cancel" type="button" onClick={handleCancel}>
+                Cancel
+              </button>
+            </div>
+          </form>
+        ) : (
+          <button className="edit" onClick={handleEditClick}>
+            Edit Name
           </button>
-        </form>
-      ) : (
-        <button onClick={handleEditClick}>Edit Name</button>
-      )}
+        )}
+
+      </div>
     </main>
   )
 }
