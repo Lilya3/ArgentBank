@@ -1,0 +1,34 @@
+.account {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  width: 80%;
+  margin: 0 auto 2rem auto;
+  padding: 1.5rem;
+}
+
+.account__content {
+  text-align: left;
+}
+
+.account__title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.account__amount {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.account__desc {
+  margin: 0;
+}
+
+.account__arrow {
+  font-size: 2rem;
+  color: #00bc77;
+}

@@ -18,41 +18,41 @@ function Header() {
   }
 
   return (
-    <nav className="main-nav">
-      <Link className="main-nav-logo" to="/">
+    <nav className="header">
+      <Link className="header__logo" to="/">
         <img
-          className="main-nav-logo-image"
+          className="header__logo-img"
           src={logo}
           alt="Argent Bank Logo"
         />
         <h1 className="sr-only">Argent Bank</h1>
       </Link>
 
-      <div>
+      <nav className="header__nav">
 
         {token ? (
           <>
-            <Link className='main-nav-item' to="/profile">
+            <Link className='header__link' to="/profile">
               <i className='fa fa-user-circle'></i>
               <span>{user?.userName}</span>
             </Link>
 
             <button 
             type="button" 
-            className='main-nav-item' 
+            className='header__link' 
             onClick={handleLogout}>
               <i className='fa fa-sign-out'></i>
               Sign Out
             </button>
           </>
         ) : (
-          <Link className='main-nav-item' to="/sign-in">
+          <Link className='header__link' to="/sign-in">
             <i className='fa fa-user-circle'></i>
             <span>Sign In</span>
           </Link>
         )}
 
-      </div>
+      </nav>
     </nav>
   )
 }

@@ -81,40 +81,118 @@ function Profile() {
     return <Navigate to="/sign-in" />
   }
 
-  return (
-    <main className="main bg-dark">
-      <div>
-
-        <h1>
-          Welcome Back
-          <br />
-          <span>
-            {user?.firstName} {user?.lastName}
-          </span>
-        </h1>
-
+    return (
+    <main className="main bg-dark-profile">
+      <div className="header profile-container">
         {isEditing ? (
-          <form onSubmit={handleSubmit}>
-            <input
-              type="text"
-              value={editedUserName}
-              onChange={(e) => setEditedUserName(e.target.value)}
-            />
+          <>
+            <h1>Edit user info</h1>
 
-            <div>
-              <button className="save" type="submit">Save</button>
-              <button className="cancel" type="button" onClick={handleCancel}>
-                Cancel
-              </button>
-            </div>
-          </form>
+            <form onSubmit={handleSubmit} className="profile-form">
+              <div className="input-wrapper">
+                <label htmlFor="userName">User name:</label>
+                <input
+                  id="userName"
+                  type="text"
+                  value={editedUserName}
+                  onChange={(e) => setEditedUserName(e.target.value)}
+                />
+              </div>
+
+              <div className="input-wrapper">
+                <label htmlFor="firstName">First name:</label>
+                <input
+                  id="firstName"
+                  type="text"
+                  value={user?.firstName || ""}
+                  disabled
+                />
+              </div>
+
+              <div className="input-wrapper">
+                <label htmlFor="lastName">Last name:</label>
+                <input
+                  id="lastName"
+                  type="text"
+                  value={user?.lastName || ""}
+                  disabled
+                />
+              </div>
+
+              <div className="profile-buttons">
+                <button className="edit-button" type="submit">
+                  Save
+                </button>
+                <button
+                  className="edit-button"
+                  type="button"
+                  onClick={handleCancel}
+                >
+                  Cancel
+                </button>
+              </div>
+            </form>
+          </>
         ) : (
-          <button className="edit" onClick={handleEditClick}>
-            Edit Name
-          </button>
-        )}
+          <>
+            <h1>
+              Welcome Back
+              <br />
+              {user?.firstName} {user?.lastName}
+            </h1>
 
+            <button className="edit-button" onClick={handleEditClick}>
+              Edit Name
+            </button>
+          </>
+        )}
       </div>
+
+      {/* COMPTES */}
+      <section className="account">
+        <div className="account-content-wrapper">
+          <h3 className="account-title">Argent Bank Checking (x8349)</h3>
+          <p className="account-amount">$2,082.79</p>
+          <p className="account-amount-description">
+            Available Balance
+          </p>
+        </div>
+        <div className="account-content-wrapper cta">
+          <button className="transaction-button">
+            View transactions
+          </button>
+        </div>
+      </section>
+
+      <section className="account">
+        <div className="account-content-wrapper">
+          <h3 className="account-title">Argent Bank Savings (x6712)</h3>
+          <p className="account-amount">$10,928.42</p>
+          <p className="account-amount-description">
+            Available Balance
+          </p>
+        </div>
+        <div className="account-content-wrapper cta">
+          <button className="transaction-button">
+            View transactions
+          </button>
+        </div>
+      </section>
+
+      <section className="account">
+        <div className="account-content-wrapper">
+          <h3 className="account-title">Argent Bank Credit Card (x8349)</h3>
+          <p className="account-amount">$184.30</p>
+          <p className="account-amount-description">
+            Current Balance
+          </p>
+        </div>
+        <div className="account-content-wrapper cta">
+          <button className="transaction-button">
+            View transactions
+          </button>
+        </div>
+      </section>
     </main>
   )
 }

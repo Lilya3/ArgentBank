@@ -1,0 +1,47 @@
+/* ===== DESKTOP >= 920px ===== */
+
+@media (min-width: 920px) {
+
+  .introduction {
+    height: 400px;
+    background-position: 0% 33%;
+  }
+
+  .introduction section {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 300px;
+    margin: 2rem;
+  }
+
+  .introduction section p {
+    font-size: 1.2rem;
+  }
+
+  .introduction section .subtitle {
+    font-size: 1.5rem;
+  }
+
+  .items {
+    flex-direction: row;
+  }
+}
+
+/* ===== TABLET >= 720px ===== */
+
+@media (min-width: 720px) {
+
+  .compte {
+    flex-direction: row;
+  }
+
+  .compte .cta {
+    flex: 0;
+  }
+
+  .compte .cta button {
+    width: 200px;
+  }
+
+}

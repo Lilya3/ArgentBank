@@ -1,0 +1,23 @@
+.login {
+  background-color: #12002b;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login__card {
+  box-sizing: border-box;
+  background-color: white;
+  width: 300px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.login__icon {
+  font-size: 5rem;
+}
+
+.login__title {
+  margin-bottom: 1rem;
+}
