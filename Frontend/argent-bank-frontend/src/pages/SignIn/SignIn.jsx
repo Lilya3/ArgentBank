@@ -46,13 +46,14 @@ function SignIn() {
   }
 
   return (
-    <main className="main bg-dark">
-      <section className="sign-in-content">
-        <i className="fa fa-user-circle sign-in-icon"></i>
-        <h1>Sign In</h1>
+    <main className="login">
+      <section className="login__card">
+        <i className="fa fa-user-circle login__icon"></i>
+        <h1 className="login__title">Sign In</h1>
 
         <form onSubmit={handleSubmit}>
-          <div className="input-wrapper">
+          
+          <div className="login__input-wrapper">
             <label htmlFor="username">Username</label>
             <input 
             type="text" 
@@ -62,10 +63,10 @@ function SignIn() {
             />
           </div>
 
-          <div className="input-wrapper">
+          <div className="login__input-wrapper">
             <label htmlFor="password">Password</label>
             <input 
-            type="password" 
+            type="password"
             autoComplete="current-password"
             id="password" 
             value={password}
@@ -73,12 +74,14 @@ function SignIn() {
             />
           </div>
 
-          <div className="input-remember">
-            <input type="checkbox" id="remember-me" />
-            <label htmlFor="remember-me">Remember me</label>
+          <div className="input__remember">
+            <input type="checkbox" id="remember__me" />
+            <label htmlFor="remember__me">Remember me</label>
           </div>
 
-          <button className="sign-in-button">Sign In</button>
+          <button className="login__button">
+            Sign In
+          </button>
         </form>
       </section>
     </main>

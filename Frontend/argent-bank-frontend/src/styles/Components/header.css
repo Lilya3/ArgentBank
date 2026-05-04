@@ -25,6 +25,17 @@
   margin-right: 0.5rem;
   font-weight: bold;
   color: #2c3e50;
+  cursor: pointer;
+}
+
+.header__link--button{
+  background: none;
+  border: none;
+  padding: none ;
+  font: inherit;
+  font-weight: bold;
+  color: inherit;
+  cursor: pointer;
 }
 
 .header__link i {

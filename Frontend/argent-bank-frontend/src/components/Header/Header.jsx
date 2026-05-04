@@ -28,7 +28,7 @@ function Header() {
         <h1 className="sr-only">Argent Bank</h1>
       </Link>
 
-      <nav className="header__nav">
+      <div className="header__nav">
 
         {token ? (
           <>
@@ -39,7 +39,7 @@ function Header() {
 
             <button 
             type="button" 
-            className='header__link' 
+            className='header__link header__link--button' 
             onClick={handleLogout}>
               <i className='fa fa-sign-out'></i>
               Sign Out
@@ -52,7 +52,7 @@ function Header() {
           </Link>
         )}
 
-      </nav>
+      </div>
     </nav>
   )
 }

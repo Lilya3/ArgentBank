@@ -2,10 +2,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff;
+  background-color: #3c3c3c;
   width: 80%;
   margin: 0 auto 2rem auto;
-  padding: 1.5rem;
+  padding: 2rem 1.5rem 2rem 1.5rem;
+  border-radius: 0.5rem;
 }
 
 .account__content {
@@ -18,10 +19,33 @@
   font-weight: normal;
 }
 
+.account__cta {
+  display: flex;
+  align-items: center;
+}
+
 .account__amount {
   margin: 0;
   font-size: 2.5rem;
-  font-weight: bold;
+}
+
+.account__button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 1rem;
+
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.account__button-text {
+  position: absolute;
+  left: -9999px;
+  font-size: 1rem;
 }
 
 .account__desc {
@@ -30,5 +54,5 @@
 
 .account__arrow {
   font-size: 2rem;
-  color: #00bc77;
+  color: white;
 }

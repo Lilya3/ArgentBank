@@ -82,15 +82,18 @@ function Profile() {
   }
 
     return (
-    <main className="main bg-dark-profile">
-      <div className="header profile-container">
+    <main className="profile">
+      
+      <div className="profile__header form__box">
+
         {isEditing ? (
           <>
-            <h1>Edit user info</h1>
+            <h1 className="profile__title">Edit user info</h1>
 
-            <form onSubmit={handleSubmit} className="profile-form">
-              <div className="input-wrapper">
-                <label htmlFor="userName">User name:</label>
+            <form onSubmit={handleSubmit} className="form">
+
+              <div className="form__group">
+                <label>User name:</label>
                 <input
                   id="userName"
                   type="text"
@@ -99,8 +102,8 @@ function Profile() {
                 />
               </div>
 
-              <div className="input-wrapper">
-                <label htmlFor="firstName">First name:</label>
+              <div className="form__group">
+                <label>First name:</label>
                 <input
                   id="firstName"
                   type="text"
@@ -109,8 +112,8 @@ function Profile() {
                 />
               </div>
 
-              <div className="input-wrapper">
-                <label htmlFor="lastName">Last name:</label>
+              <div className="form__group">
+                <label>Last name:</label>
                 <input
                   id="lastName"
                   type="text"
@@ -119,14 +122,14 @@ function Profile() {
                 />
               </div>
 
-              <div className="profile-buttons">
-                <button className="edit-button" type="submit">
+              <div className="form__group">
+                <button className="form__button" type="submit">
                   Save
                 </button>
                 <button
-                  className="edit-button"
                   type="button"
                   onClick={handleCancel}
+                  className="form__button"
                 >
                   Cancel
                 </button>
@@ -135,63 +138,72 @@ function Profile() {
           </>
         ) : (
           <>
-            <h1>
+            <h1 className="profile__title">
               Welcome Back
               <br />
               {user?.firstName} {user?.lastName}
             </h1>
 
-            <button className="edit-button" onClick={handleEditClick}>
+            <button className="profile__edit" onClick={handleEditClick}>
               Edit Name
             </button>
           </>
         )}
       </div>
 
-      {/* COMPTES */}
       <section className="account">
-        <div className="account-content-wrapper">
-          <h3 className="account-title">Argent Bank Checking (x8349)</h3>
-          <p className="account-amount">$2,082.79</p>
-          <p className="account-amount-description">
-            Available Balance
-          </p>
+        <div className="account__content">
+          <h3 className="account__title">Argent Bank Checking (x8349)</h3>
+          <p className="account__amount">$2,082.79</p>
+          <p className="account__desc">Available Balance</p>
         </div>
-        <div className="account-content-wrapper cta">
-          <button className="transaction-button">
-            View transactions
+
+        <div className="account__cta">
+          <button className="account__button">
+            <span className="account__button-text">
+              View transactions
+            </span>
+            <i className="fa fa-chevron-right account__arrow"></i>
           </button>
         </div>
+
       </section>
 
       <section className="account">
-        <div className="account-content-wrapper">
-          <h3 className="account-title">Argent Bank Savings (x6712)</h3>
-          <p className="account-amount">$10,928.42</p>
-          <p className="account-amount-description">
-            Available Balance
-          </p>
+        <div className="account__content">
+          <h3 className="account__title">Argent Bank Savings (x6712)</h3>
+          <p className="account__amount">$10,928.42</p>
+          <p className="account__desc">Available Balance</p>
         </div>
-        <div className="account-content-wrapper cta">
-          <button className="transaction-button">
-            View transactions
+        
+        <div className="account__cta">
+          <button className="account__button">
+            <span className="account__button-text">
+              View transactions
+            </span>
+            <i className="fa fa-chevron-right account__arrow"></i>
           </button>
         </div>
+
       </section>
 
       <section className="account">
-        <div className="account-content-wrapper">
-          <h3 className="account-title">Argent Bank Credit Card (x8349)</h3>
-          <p className="account-amount">$184.30</p>
-          <p className="account-amount-description">
+        <div className="account__content">
+          <h3 className="account__title">Argent Bank Credit Card (x8349)</h3>
+          <p className="account__amount">$184.30</p>
+          <p className="account__desc">
             Current Balance
           </p>
         </div>
-        <div className="account-content-wrapper cta">
-          <button className="transaction-button">
-            View transactions
+        <div className="account__cta">
+          <button className="account__button">
+            <span className="account__button-text">
+              View transactions
+            </span>
+            <i className="fa fa-chevron-right account__arrow"></i>
           </button>
         </div>
+
       </section>
     </main>
   )
