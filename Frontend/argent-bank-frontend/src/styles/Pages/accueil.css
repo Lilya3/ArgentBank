@@ -44,3 +44,44 @@
     font-size: 1.2rem;
   }
 }
+
+@media (max-width: 768px) {
+  .home__hero {
+    height: 350px;
+  }
+
+  .home__content {
+    position: static;
+    margin: 2rem 1rem;
+    width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .home__hero {
+    height: auto;
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .home__content {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+
+  .home__content .subtitle {
+    font-size: 1.1rem;
+    line-height: 1.4;
+  }
+
+  .home__content .text {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .home__features {
+    padding: 1rem 0;
+  }
+}

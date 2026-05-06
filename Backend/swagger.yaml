@@ -205,33 +205,33 @@ paths:
           description: Transaction not found
         '500':
           description: Internal Server Error
-
+          
   /categories:
     get:
       security:
-        - Bearer []
-      
+        - Bearer: []
+
       tags:
         - Transaction Module
-      
+
       summary: Get transaction categories
 
       description: API for fetching transaction categories
 
       produces:
         - application/json
-      
+
       responses:
         '200':
-          description: Categories retrieved Successfully
+          description: Categories retrieved successfully
           schema:
             type: array
             items:
               $ref: '#/definitions/Category'
-        
+
         '401':
           description: Unauthorized
-        
+
         '500':
           description: Internal Server Error
 

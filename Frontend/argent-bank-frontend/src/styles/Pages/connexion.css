@@ -23,10 +23,6 @@
   margin: 0.5rem 0 1rem 0;
 }
 
-.login__form {
-  width: 100%;
-}
-
 .login__input-wrapper {
   display: flex;
   flex-direction: column;
@@ -71,4 +67,20 @@
 
 .login__button:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .login {
+    padding: 1rem;
+  }
+
+  .login__card {
+    width: 100%;
+    max-width: 320px;
+    padding: 1.25rem;
+  }
+
+  .login__input-wrapper input {
+    font-size: 1rem;
+  }
 }

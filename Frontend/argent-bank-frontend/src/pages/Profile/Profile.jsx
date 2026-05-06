@@ -84,7 +84,7 @@ function Profile() {
     return (
     <main className="profile">
       
-      <div className="profile__header form__box">
+      <div className="form__box">
 
         {isEditing ? (
           <>

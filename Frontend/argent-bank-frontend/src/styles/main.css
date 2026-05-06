@@ -1,15 +1,12 @@
-@import './Components/header';
-@import './Components/footer';
-@import './Components/introduction';
-@import './Components/item';
-@import './Components/formulaire';
-@import './Components/compte';
-@import './Components/information';
+@import './Components/header.css';
+@import './Components/footer.css';
+@import './Components/item.css';
+@import './Components/formulaire.css';
+@import './Components/compte.css';
 
-@import './Layout/responsive';
-@import './Layout/base';
+@import './Layout/base.css';
 
-@import './Pages/accueil';
-@import './Pages/connexion';
-@import './Pages/user';
+@import './Pages/accueil.css';
+@import './Pages/connexion.css';
+@import './Pages/user.css';
 

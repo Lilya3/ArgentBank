@@ -20,3 +20,30 @@
 .feature__text {
   font-size: 0.9rem;
 }
+
+@media (max-width: 768px) {
+  .feature {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .feature {
+    padding: 1.5rem 1rem;
+  }
+
+  .feature__icon {
+    width: 80px;
+    border-width: 8px;
+    padding: 0.8rem;
+  }
+
+  .feature__title {
+    font-size: 1.1rem;
+  }
+
+  .feature__text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+}
