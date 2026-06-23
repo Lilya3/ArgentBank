@@ -111,6 +111,18 @@ Ce projet nécessite un back-end Node.js et une base de données MongoDB pour fo
 
 https://github.com/Lilya3/ArgentBank
 
+## Captures
+<img width="1878" height="1069" alt="image" src="https://github.com/user-attachments/assets/3d52525f-4040-4298-b83b-6dcd09a8502c" />
+<img width="1874" height="997" alt="image" src="https://github.com/user-attachments/assets/830a1701-09f2-455a-834b-cbad883bebca" />
+<img width="1830" height="752" alt="image" src="https://github.com/user-attachments/assets/0bd01dc3-f0ba-4ab2-b43e-7b11f51cbc01" />
+<img width="1870" height="1038" alt="image" src="https://github.com/user-attachments/assets/50a31f0b-b200-4e20-9d8b-45279b35c3cb" />
+<img width="1852" height="571" alt="image" src="https://github.com/user-attachments/assets/387bb808-aaa8-48d0-afc1-338ab33e1597" />
+
+
+
+
+
+
 ## Auteur
 
 Lilya3
